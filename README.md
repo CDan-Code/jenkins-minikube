@@ -22,10 +22,13 @@ Steps to run
 1) terraform init
 2) terraform apply
 
-Get the port it's running on ... 
-kubectl get svc jenkins -n jenkins -o jsonpath="{.spec.ports[*].nodePort}
+On Windows:
 
-Go to localhost:port
+Go to http://localhost:32000
+
+If using Minikube:
+
+get the ip of Minikube by running the command 'minikube ip' and go to http://<minikube ip value>:32000
 
 To get the jenkins password use : 
 
