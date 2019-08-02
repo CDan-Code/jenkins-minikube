@@ -1,13 +1,11 @@
 resource "kubernetes_namespace" "jenkins" {
   metadata {
-    annotations {
+    annotations = {
       name = "jenkins"
     }
-
-    labels {
+    labels = {
       purpose = "ci"
     }
-
     name = "jenkins"
   }
 }

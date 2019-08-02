@@ -3,14 +3,14 @@ resource "kubernetes_daemonset" "dind" {
   metadata {
     name = "dind"
     namespace = "jenkins"
-    labels {
+    labels = {
       role = "ci"
     }
   }
 
   spec {
     selector {
-      match_labels {
+      match_labels = {
         role = "ci"
       }
     }
@@ -24,7 +24,7 @@ resource "kubernetes_daemonset" "dind" {
 
     template {
       metadata {
-        labels {
+        labels = {
           role = "ci"
         }
       }
@@ -34,7 +34,7 @@ resource "kubernetes_daemonset" "dind" {
       termination_grace_period_seconds = "45"
       volume {
         name = "varlibdocker"
-        empty_dir = {}
+        empty_dir {}
       }
       volume {
         name = "rundind"
