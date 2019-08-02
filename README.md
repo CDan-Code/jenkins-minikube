@@ -3,7 +3,7 @@ Terraform plan to create a simple jenkins instance running and using an alternat
 
 -----------------------
 
-## Setup on Windows 
+### Setup on Windows 
 
 * Install Docker for Windows and enable Kubernetes cluster in the settings
 
@@ -17,20 +17,20 @@ choco install terraform -y
 
 
 -----------------------
-## Steps to run  
+### Steps to run  
 
 1) terraform init
 2) terraform apply
 
-### On Windows:
+#### On Windows:
 
 Go to http://localhost:32000
 
-### If using Minikube:
+#### If using Minikube:
 
 get the ip of Minikube by running the command 'minikube ip' and go to http://<minikube ip value>:32000
 
-### To get the jenkins password use : 
+#### To get the jenkins password use : 
 
 **MAC:** printf $(kubectl get secret --namespace jenkins jenkins -o jsonpath="{.data.jenkins-admin-password}" | base64 --decode);echo
 
