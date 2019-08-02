@@ -37,3 +37,4 @@ get the ip of Minikube by running the command 'minikube ip' and go to http://<mi
 **Windows:** kubectl get secret --namespace jenkins jenkins -o jsonpath="{.data.jenkins-admin-password}" | base64 --decode
 
 login with username admin and previous password
+
