@@ -28,7 +28,7 @@ Go to http://localhost:32000
 
 #### If using Minikube:
 
-get the ip of Minikube by running the command 'minikube ip' and go to http://<<minikube ip value>>:32000
+get the ip of Minikube by running the command 'minikube ip' and go to http://{minikube ip value}:32000
 
 #### To get the jenkins password use : 
 
