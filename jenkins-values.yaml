@@ -45,11 +45,11 @@ master:
     - 0.0.0.0/0
   # List of plugins to be install during Jenkins master start
   installPlugins:
-    - kubernetes:1.15.6
+    - kubernetes:1.18.1
     - workflow-aggregator:2.6
     - workflow-job:2.32
     - credentials-binding:1.19
-    - git:3.10.0
+    - git:3.11.0
     - github:1.29.4
     - greenballs:1.440
     - blueocean:1.17
@@ -69,7 +69,7 @@ master:
 agent:
   enabled: true
   image: "jenkins/jnlp-slave"
-  imageTag: "3.27-1"
+  imageTag: "3.29-1"
   customJenkinsLabels: []
   # name of the secret to be used for image pulling
   imagePullSecretName:
